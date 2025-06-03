@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1 Bet On Any Number</title>
+    <link rel="shortcut icon" href="public/contents/logo.jpg" type="image/x-icon">
+</head>
+<link rel="stylesheet" href="public/style.css">
+
+<body>
+
+    <div class="body">
+        <div>
+            <header class="head">
+                <img src="public/contents/logo.jpg" height="65px" alt="">
+                <h1>Lottery 95</h1>
+                <a href="#contact">Contact</a>
+            </header>
+            <div class="main" id="data">
+                <h1>Lottery95 Welcomes You</h1>
+
+            </div>
+            <hr>
+            <br>
+            <div class="maini">
+                <h1 class="nd">New Lottery In</h1>
+
+                <h2 id="timer">Loading ....</h2>
+                <h2>Choose a number from above</h2>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="mainii">
+                <h3>
+                    # How To Play The Lottery 95 :
+                </h3>
+                <br>
+                <p>
+                    1)>Make Payment On <span onclick="Copy(`niteshnitar-1@okhdfcbank`)" id="clip">Upi Id</span>
+                    And Paste Transaction id in Form
+                    <br>
+                    2)> One Number Out Of These Three Would Be Selected as Lucky Number.
+                    <br>
+                    3)> Winners Would Get Their Money Dubbled.
+                    <br>
+                    4)> Lucky Number Will Be Announced you Daily On 16:00 Hrs Daily.
+                    <br>
+                    5)> Dubbled Money Will Be Rewarded Within 12 Working Hours.
+                    <br>
+                    6)> Wrongly Filled Form Will Be Disqualified.
+                    <br>
+                    7)> Click On The Number To Bet And Then Pay.
+                </p>
+            </div>
+            <br>
+            <hr>
+            <div id="contact">
+                <h3>Message us</h3>
+                <form action="https://sheetdb.io/api/v1/1ul6ojuovasee" method="post" id="Message">
+
+                    <label> Name :
+                        <input type="text" required placeholder="Your Name" name="data[Name]" id="forminp">
+                    </label>
+
+
+                    <label>
+                        Phone No:
+                        <input type="number" pattern="\d*" minlength="10" maxlength="10" required name="data[Phone]"
+                            placeholder="Phone No" id="formphone">
+                    </label>
+
+                    <label>
+                        Message :
+                        <input name="data[Message]" placeholder="Your Message" id="message">
+                    </label>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <hr>
+            <br>
+        </div>
+        <footer>
+            <div>
+                <p>© 2023 Code Turbulent
+                </p>
+
+                <p>
+                    Designed and Devoloped By: <a href="http://www.instagram.com/codeturbulent">IG : @codeturbulent</a>
+                </p>
+            </div>
+        </footer>
+        <div id="formc">
+            <div id="formb">
+                <form method="post" action="https://sheetdb.io/api/v1/1ul6ojuovasee" id="Bettingon">
+                    <h1 style="margin-bottom: 20px;">Betting on <span id="change"></span></h1>
+                    <label> Name :
+                        <input type="text" required placeholder="Your Name" name="data[Name]" id="forminp">
+                    </label>
+                    <br>
+                    <label>
+                        Phone No:
+                        <input type="number" pattern="\d*" minlength="10" maxlength="10" required name="data[Phone]"
+                            placeholder="Phone No" id="formphone">
+                    </label>
+                    <label style="display: none;">Betting:
+                        <input name="data[Betting]" value="" id="betting">
+                    </label>
+                    <br>
+                    <label> Amount : 
+                        Rs50
+                        <input type="checkbox" value="50rs" name="data[Amount]" id="">
+                        Rs100
+                        <input type="checkbox" value="100rs" name="data[Amount]" id="">
+                        Rs200
+                        <input type="checkbox" value="200rs" name="data[Amount]" id="">
+                    </label>
+                    <br>
+                    <label>Trans id :
+                        <input name="data[Trans]" value="" placeholder="Paste Your Transaction Id " required
+                            id="betting">
+                    </label>
+
+                    <br>
+                    <button type="submit">Submit</button>
+                    <span class="close" onclick="closebet()">x</span>
+
+                </form>
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</body>
+<script src="public/script.js"></script>
+<script>
+    var form = document.getElementById('Bettingon');
+    form.addEventListener("submit", e => {
+        alert("Betting ...")
+        e.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("Bettingon")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+            // you can put any JS code here
+            window.location.replace("submit.html");
+        });
+    });
+    var form = document.getElementById('Message');
+    form.addEventListener("submit", e => {
+        alert("Sending..")
+        e.preventDefault();
+        fetch(form.action, {
+            method: "POST",
+            body: new FormData(document.getElementById("Message")),
+        }).then(
+            response => response.json()
+        ).then((html) => {
+            // you can put any JS code here
+            window.location.replace("submit.html");
+        });
+    });
+    
+    const Copy = (text) => {
+        const textArea = document.createElement("textarea");
+         textArea.value = text;
+          document.body.appendChild(textArea); 
+          textArea.focus(); textArea.select(); 
+          try {
+             document.execCommand('copy')
+             }
+              catch (err) { 
+                console.error('Unable to copy to clipboard', err)
+             }
+              document.body.removeChild(textArea);
+              document.getElementById("clip").innerHTML = "Upi Id # Coppied #"
+              
+                window.location = "upi://pay?pa=niteshnitar-1@okhdfcbankId&pn=Lottery95";
+            
+
+    };
+</script>
+
+</html>

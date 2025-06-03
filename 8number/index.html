@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>8 Numbers</title>
+    <link
+      rel="shortcut icon"
+      href="icon.png"
+      type="image/icon-x"
+    />
+    <script src="index.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        color: rgb(250, 209, 209);
+      }
+
+      body {
+        background-color: rgba(255, 146, 146, 0.719);
+      }
+
+      .body {
+        margin: 8.45vh auto;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+      }
+
+      .boxnum {
+        height: 10vh;
+        width: 10vh;
+      }
+
+      input {
+        border: none;
+        width: 7.5vh;
+        height: 10vh;
+        color: rgb(32, 0, 0);
+        font-size: 8vh;
+
+        padding-left: 2.5vh;
+        background-color: rgb(255, 206, 206);
+      }
+
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+
+      td {
+        border: 4px rgb(70, 0, 0) solid;
+      }
+
+      .rules,
+      .maingame {
+        background-color: rgba(253, 120, 120, 0.719);
+        width: 800px;
+        padding: 30px;
+        font-size: 25px;
+        margin: 20px auto;
+        padding: auto;
+        border: 3px dashed;
+        border-radius: 15px;
+      }
+
+      .maingame {
+        width: auto;
+      }
+
+      .heading {
+        text-align: center;
+        font-size: 50px;
+        background-color: rgb(255, 70, 70);
+      }
+
+      footer {
+        background-color: rgb(255, 8, 8);
+        font-size: 20px;
+        text-align: center;
+      }
+
+      img {
+        height: 50px;
+        padding-top: 7px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="heading">
+      <img
+        src="icon.png"
+        srcset=""
+      />
+      8 Numbers 8 Box
+    </h1>
+    <div class="body">
+      <div class="rules">
+        <h2>Rules</h2>
+        <h3>
+          You have to fill the boxes with numbers from 1-8 by following below
+          mentioned rules.
+          <br />
+          Rule 1: Predecessor and successor can't be besides. Example if we take
+          number 3 in any box, than neither side of 3 can have 2 or 4. <br />
+          Rule 2: Predecessor and successor can't be upside or downside.
+          Example: if we take 3 in any box, then the box above can not have 2 or
+          4, similarly box below can not have 2 or 4. <br />
+          Rule 3: Predecessor and successor can't be diagonally either.
+        </h3>
+      </div>
+      <div class="maingame">
+        <table>
+          <tr>
+            <td style="border: none"></td>
+            <td>
+              <div class="boxnum">
+                <input id="box1" type="number" maxlength="1" />
+              </div>
+            </td>
+            <td style="border: none"></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="boxnum">
+                <input id="box2" type="number"  maxlength="1" />
+              </div>
+            </td>
+            <td>
+              <div class="boxnum">
+                <input id="box3" type="number" maxlength="1" />
+              </div>
+            </td>
+            <td>
+              <div class="boxnum">
+                <input id="box4" type="number" maxlength="1" />
+              </div>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div class="boxnum">
+                <input id="box5" type="number" maxlength="1" />
+              </div>
+            </td>
+            <td>
+              <div class="boxnum">
+                <input id="box6" type="number" maxlength="1" />
+              </div>
+            </td>
+            <td>
+              <div class="boxnum">
+                <input id="box7" type="number" maxlength="1" />
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: none"></td>
+            <td>
+              <div class="boxnum">
+                <input id="box8" type="number" maxlength="1" />
+              </div>
+            </td>
+            <td style="border: none">
+              <button
+                type="submit"
+                style="
+                  height: 10vh;
+                  width: 10vh;
+                  font-size: 3.5vh;
+                  color: rgb(66, 0, 0);
+                  background-color: rgba(255, 101, 101, 0.719);
+                  margin: 5px;
+                "
+                onclick="check()"
+              >
+                Done
+              </button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <footer>Made By Himanshu Yadav</footer>
+  </body>
+</html>

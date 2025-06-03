@@ -1,0 +1,131 @@
+body {
+  background: rgb(58, 62, 180);
+  background: linear-gradient(
+    300deg,
+    rgba(119, 0, 0, 0.977) 22%,
+    rgb(153, 0, 164) 50%,
+    rgb(0, 11, 222) 77%
+  );
+  font-family: cursive;
+  height: auto;
+  min-height: 98.5vh;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.b {
+  display: flex;
+}
+.inputtd {
+  font-family: cursive;
+  background-blend-mode: color-burn;
+  background-color: rgba(29, 0, 0, 0.591);
+  padding: 10px;
+  height: fit-content;
+  width: auto;
+  box-shadow: 50px 50px 100px rgb(0, 0, 0);
+  border-radius: 20px;
+}
+.input {
+  border: 1px solid snow;
+  background-color: rgba(93, 53, 255, 0);
+  font-size: 20px;
+  border-radius: 5px;
+}
+.tdform {
+  height: 130px;
+  width: 1000px;
+  font-family: cursive;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+}
+.button {
+  background-color: rgba(0, 0, 0, 0.705);
+  border: 2px rgba(140, 140, 140, 0.415) solid;
+  color: rgba(255, 255, 255, 0.766);
+  font-size: 20px;
+  margin: 5px 5px 5px 5px;
+  font-family: cursive;
+  border-radius: 7px;
+  font-weight: 700;
+}
+button:hover {
+  color: rgba(0, 0, 0, 0.658);
+  background-color: rgba(255, 255, 255, 0.732);
+  border: 3px solid rgba(0, 0, 0, 0.664);
+}
+h1 {
+  padding: 40px;
+  color: rgba(255, 255, 255, 0.216);
+  position: fixed;
+  z-index: -1;
+  height: 50vh;
+  width: 80vw;
+  text-align: center;
+  font-size: 250px;
+}
+.screen {
+  background-blend-mode: color-burn;
+  background-color: rgba(51, 0, 0, 0.494);
+  height: auto;
+  min-height: 300px;
+
+  width: 1050px;
+  box-shadow: 50px 50px 100px rgb(0, 0, 0);
+  margin-top: 100px;
+  border-radius: 20px;
+}
+textarea {
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  margin: 7px;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  resize: none;
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.762);
+  opacity: 1;
+}
+input {
+  color: rgb(255, 255, 255);
+  font-family: cursive;
+  margin: 7px;
+  grid-column-start: 4;
+  grid-column-end: 7;
+}
+span , p{
+  text-align: center;
+  padding-top: 10px; 
+}
+.table {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px auto;
+}
+td {
+  border: 2px solid rgba(255, 255, 255, 0.664);
+  background-color: rgba(0, 0, 0, 0.674);
+  color: rgba(255, 255, 255, 0.664);
+  padding: 0px 5px;
+  text-align: center;
+  border-radius: 4px;
+  margin: 7px;
+  display: inline-block;
+}
+.tdbtn:hover {
+  border: 2px solid rgba(0, 0, 0, 0.664);
+  background-color: rgba(255, 253, 253, 0.674);
+  color: rgba(0, 0, 0, 0.823);
+}
+body {
+  counter-reset: Serial; /* Set the Serial counter to 0 */
+}
+tbody td:first-child:before {
+  counter-increment: Serial; /* Increment the Serial counter */
+  content: counter(Serial); /* Display the counter */
+}

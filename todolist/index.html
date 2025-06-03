@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link
+      rel="shortcut icon"
+      href="icon.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <link rel="stylesheet" href="style.css" />
+
+  <body>
+    <h1>To Do List</h1>
+    <div class="b">
+      <div class="inputtd">
+        <form action="" class="tdform">
+          <textarea
+            placeholder="Write your text here..."
+            name="todo"
+            id="textar"
+            cols="600"
+            class="input"
+            rows="4"
+            required
+          ></textarea>
+          <input
+            type="text"
+            required
+            class="input"
+            id="text"
+            value=""
+            placeholder="Title..."
+          />
+          <button class="submit , button" onclick="save()" type="reset">
+            Add to list
+          </button>
+          <button class="reset , button" type="reset">Reset</button>
+          <p class="reset , button" type="button" id="td">
+            <span>0</span> Tasks Done
+          </p>
+        </form>
+      </div>
+    </div>
+    <div class="screen">
+      <table class="table">
+        <thead>
+          <tr>
+            <td width="70px">Sr.No</td>
+            <td width="500px">Title</td>
+            <td width="120px" title="Date">Time</td>
+            <td class="tdbtn" width="110px" onclick="remove()">Remove All</td>
+            <td class="tdbtn" width="100px" onclick="done()">Check All</td>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>

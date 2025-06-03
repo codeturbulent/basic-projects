@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap" rel="stylesheet">
+<link rel="icon" href="https://yogreetings.com/uploads/worigin/2021/07/16/happy-new-year-2022-wishes-card-with-name-online-1_7a75f.jpg" type="image/x-icon">
+    <title>HAPPY NEW YEAR </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+
+            background-color: #333;
+            background-repeat: no-repeat;            background-image: url(1.jpg);
+
+            background-attachment: fixed;
+            background-position: center;
+            background-blend-mode: hard-light;
+        }
+
+        .container {
+            position: absolute;
+            height: 80vh;
+            width: 80vw;
+            background-blend-mode: normal;
+            background-image: url(1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            top: 10vh;
+            right: 10vw;
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 5), 0 0 0 100px rgba(0, 0, 0, -1);
+            font-weight: 300;
+            display: flex;
+            letter-spacing: 2px;
+            font-family: 'Vujahday Script', cursive;
+            justify-content: center;
+            align-items: center;
+            color: rgb(4, 7, 24);
+            flex-direction: column;
+            text-shadow: 0 0 2rem rgba(0, 0, 0, 10);
+            font-weight: bold;
+
+        }
+
+
+
+        .countdown {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 60vw;
+
+        }
+
+        .box {
+            background-color: rgb(255, 166, 0);
+            font-size: 15px;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .num {
+            background-color: rgb(0, 0, 0);
+            height: 10vw;
+            width: 10vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 4vw;
+            box-shadow: 0 50px 50px rgba(0, 0, 0, 5), 0 0 0 100px rgba(0, 0, 0, -1);
+            color: bisque;
+
+        }
+
+        .form {
+
+            display: block;
+            width: 250px;
+            height: 2vh;
+            padding: 6px;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid #42a0ff;
+            border-radius: 10px;
+            transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <h1 class="head" style="font-size: 7.5vw;">Countdown to new year </h1>
+            <h2 class="head" style="font-size: 90px;color: rgb(0, 0, 0); text-align: center;">-2026-</h2>
+        </div>
+        <div class="countdown">
+            <div id="day">
+
+                <div class="num">
+                    <h2 id="updateday">99</h2>
+                </div>
+                <div class="box">
+                    <h2>Day</h2>
+                </div>
+            </div>
+            <div id="hrs">
+
+                <div class="num">
+                    <h2 id="updatehrs">99</h2>
+                </div>
+                <div class="box">
+                    <h2>Hrs</h2>
+                </div>
+            </div>
+            <div id="min">
+
+                <div class="num">
+                    <h2 id="updatemin">99</h2>
+                </div>
+                <div class="box">
+                    <h2>Min</h2>
+                </div>
+            </div>
+            <div id="sec">
+
+                <div class="num">
+                    <h2 id="updatesec">99</h2>
+                </div>
+                <div class="box">
+                    <h2>Sec</h2>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+
+
+    <!-- Display the countdown timer in an element -->
+    <script>
+
+
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 1, 2026 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("updateday").innerHTML = days;
+            document.getElementById("updatehrs").innerHTML = hours;
+            document.getElementById("updatemin").innerHTML = minutes;
+            document.getElementById("updatesec").innerHTML = seconds;
+
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+
+
+
+                document.getElementById("updateday").innerHTML = "00";
+                document.getElementById("updatehrs").innerHTML = "00";
+                document.getElementById("updatemin").innerHTML = "00";
+                document.getElementById("updatesec").innerHTML = "00";
+
+            }
+
+        }, 1000);
+
+
+        
+    </script>
+  
+</body>
+
+
+</html>
