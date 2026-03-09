@@ -1,0 +1,306 @@
+/* Edit the CSS definitions below to adjust custom theme styles */
+/* For areas that you may want to use gradients for, use the following tool - https://cssgradient.io/ */
+
+
+/* ************************* */
+/*    THEME-01 CSS STYLES    */
+/* ************************* */
+
+/* Main Navigation - Mobile - Current vertical accent colour */
+@media (max-width: 991px){
+    #uber.theme-01 .current a.mainNavItem:after {
+        border-left: 12px solid #e82012;
+    }
+}
+
+/* Main Navigation - Current vertical accent colour */
+@media (min-width: 992px){
+    #uber.theme-01 .current a.mainNavItem:after {
+        border-color: #e82012;
+    }
+}
+
+/* Main Navigation - Animated Border on Hover */
+#uber.theme-01 a.mainNavItem.current:after,
+#uber.theme-01 a.mainNavItem:focus:after,
+#uber.theme-01 a.mainNavItem:hover:after,
+#uber.theme-01 .sfHover a.mainNavItem:after {
+    border-color: #e82012;
+}
+
+/* Main Navigation - Link Hover Colour */
+#uber.theme-01 #mainNav .dropdown li a:hover,
+#uber.theme-01 #mainNav .dropdown li a:focus,
+#uber.theme-01 #mainNav .dropdown li a:active {
+    color: #e82012;
+}
+
+/* Header Bar - Search Button */ 
+#uber.theme-01 .searchContainer .search .searchButton {
+    background-color: #e82012;
+    border: 2px solid #e82012;
+}
+
+/* Header Bar - Search Button - Hover & Focus */
+#uber.theme-01 .searchContainer .search .searchButton:hover,
+#uber.theme-01 .searchContainer .search .searchButton:focus {
+    background-color: #fff;
+    border-color: #e82012;
+}
+
+/* Tucked Header Bar - Search Button - Background Colour */
+#uber.theme-01 #stickySearchBtn {
+    background-color: #e82012;
+}
+
+/* How Do I Modal - Search Button */
+#idLikeToModal.theme-01 .modal-search .searchContainer .search .searchButton {
+    background-color: #e82012 !important;
+    border: 2px solid #e82012;
+}
+
+/* Homepage - Feature Carousel - Item Bottom Border */
+#uber.theme-01 #section-slider .content:after {
+    border-bottom: 4px solid #e82012;
+}
+
+/* Homepage - Feature Carousel - Page Dots Colour */
+#uber.theme-01 #section-slider .flickity-page-dots .dot.is-selected {
+    background-color: #e82012;
+}
+
+/* Homepage - Events - Day Box Background Colour */
+#uber.theme-01 #section-newsEvents .calendarFeed .listItem .listItem-Container .listItem-DateContainer {
+    background-color: #e82012;
+}
+
+/* A to Z Bar - Hover Background Colour */
+#uber.theme-01 #atozBar li a:hover,
+#uber.theme-01 #atozBar li a:focus {
+    background-color: #e82012;
+}
+
+/* City Services - Title Left Border */
+#uber.theme-01 #servicesInfo h1 {
+    border-left: 6px solid #e82012;
+}
+
+/* Interior - Title Left Border */
+#uber.theme-01 #pageHeading h1 {
+    border-left: 6px solid #e82012;
+}
+
+/* Interior - Default Button Primary */
+#uber.theme-01 button.defaultButton-Red,
+#uber.theme-01 a.defaultButton-Red,
+#uber.theme-01 .defaultButton-Red a {
+    background-color: #e82012;
+    border-color: #e82012;
+}
+
+/* Interior - Default Button Primary - Hover */
+#uber.theme-01 button.defaultButton-Red:hover,
+#uber.theme-01 button.defaultButton-Red:focus,
+#uber.theme-01 button.defaultButton-Red:active,
+#uber.theme-01 a.defaultButton-Red:hover,
+#uber.theme-01 a.defaultButton-Red:focus,
+#uber.theme-01 a.defaultButton-Red:active,
+#uber.theme-01 .defaultButton-Red a:hover,
+#uber.theme-01 .defaultButton-Red a:focus,
+#uber.theme-01 .defaultButton-Red a:active {
+   background-color: #fff; 
+}
+
+/* Interior - Blockquote - Left Border */
+#uber.theme-01 blockquote {
+    border-left: 4px solid #e82012;
+}
+
+/* Interior - Sub Nav - Top Border */
+#uber.theme-01 #subNavWrapper #subNavContainer {
+    border-top: 3px solid #e82012;
+}
+
+/* Interior - Contact Box - Top Border */
+#uber.theme-01 #contactMainContainer .contactHeaderTitle {
+    border-top: 3px solid #e82012;
+}
+
+/* Layout Builder - CTA Brand One */
+#uber.theme-01 .lb-callToAction > div .lb-callToAction_contentWrapper .lb-callToAction_link.brand-one a {
+    background-color: #e82012;
+}
+
+/* Layout Builder - CTA Brand One - Hover */
+#uber.theme-01 .lb-callToAction>div .lb-callToAction_contentWrapper .lb-callToAction_link.brand-one a:hover,
+#uber.theme-01 .lb-callToAction>div .lb-callToAction_contentWrapper .lb-callToAction_link.brand-one a:focus {
+    background-color: #b9190e; /* dark red */
+}
+
+/* Layout Builder - Image Box - Background Colour */
+#uber.theme-01 .lb-imageBox > div .lb-imageBox_header.brand-one {
+    background-color: #e82012;
+}
+
+/* Landing - Feature Boxes - Bottom Border */
+#uber.theme-01 .section-feature .boxContainer .boxContent:after {
+    border-bottom: 4px solid #e82012;
+}
+
+/* Landing - Slider - Page Dots */
+#uber.theme-01.landing:not(.landingInterior) .ic-slider-dot-pagination li.current a,
+#uber.theme-01.landing:not(.interior) .ic-slider-dot-pagination li.current a {
+    background-color: #e82012;
+}
+
+
+/* ************************* */
+/*    THEME-02 CSS STYLES    */
+/* ************************* */
+
+/* Main Navigation - Mobile - Current vertical accent colour */
+@media (max-width: 991px){
+    #uber.theme-02 .current a.mainNavItem:after {
+        border-left: 12px solid #e82012;
+    }
+}
+
+/* Main Navigation - Current vertical accent colour */
+@media (min-width: 992px){
+    #uber.theme-02 .current a.mainNavItem:after {
+        border-color: #e82012;
+    }
+}
+
+/* Main Navigation - Animated Border on Hover */
+#uber.theme-02 a.mainNavItem.current:after,
+#uber.theme-02 a.mainNavItem:focus:after,
+#uber.theme-02 a.mainNavItem:hover:after,
+#uber.theme-02 .sfHover a.mainNavItem:after {
+    border-color: #e82012;
+}
+
+/* Main Navigation - Link Hover Colour */
+#uber.theme-02 #mainNav .dropdown li a:hover,
+#uber.theme-02 #mainNav .dropdown li a:focus,
+#uber.theme-02 #mainNav .dropdown li a:active {
+    color: #e82012;
+}
+
+/* Header Bar - Search Button */ 
+#uber.theme-02 .searchContainer .search .searchButton {
+    background-color: #e82012;
+    border: 2px solid #e82012;
+}
+
+/* Header Bar - Search Button - Hover & Focus */
+#uber.theme-02 .searchContainer .search .searchButton:hover,
+#uber.theme-02 .searchContainer .search .searchButton:focus {
+    background-color: #fff;
+    border-color: #e82012;
+}
+
+/* Tucked Header Bar - Search Button - Background Colour */
+#uber.theme-02 #stickySearchBtn {
+    background-color: #e82012;
+}
+
+/* How Do I Modal - Search Button */
+#idLikeToModal.theme-02 .modal-search .searchContainer .search .searchButton {
+    background-color: #e82012 !important;
+    border: 2px solid #e82012;
+}
+
+/* Homepage - Feature Carousel - Item Bottom Border */
+#uber.theme-02 #section-slider .content:after {
+    border-bottom: 4px solid #e82012;
+}
+
+/* Homepage - Feature Carousel - Page Dots Colour */
+#uber.theme-02 #section-slider .flickity-page-dots .dot.is-selected {
+    background-color: #e82012;
+}
+
+/* Homepage - Events - Day Box Background Colour */
+#uber.theme-02 #section-newsEvents .calendarFeed .listItem .listItem-Container .listItem-DateContainer {
+    background-color: #e82012;
+}
+
+/* A to Z Bar - Hover Background Colour */
+#uber.theme-02 #atozBar li a:hover,
+#uber.theme-02 #atozBar li a:focus {
+    background-color: #e82012;
+}
+
+/* City Services - Title Left Border */
+#uber.theme-02 #servicesInfo h1 {
+    border-left: 6px solid #e82012;
+}
+
+/* Interior - Title Left Border */
+#uber.theme-02 #pageHeading h1 {
+    border-left: 6px solid #e82012;
+}
+
+/* Interior - Default Button Primary */
+#uber.theme-02 button.defaultButton-Red,
+#uber.theme-02 a.defaultButton-Red,
+#uber.theme-02 .defaultButton-Red a {
+    background-color: #e82012;
+    border-color: #e82012;
+}
+
+/* Interior - Default Button Primary - Hover */
+#uber.theme-02 button.defaultButton-Red:hover,
+#uber.theme-02 button.defaultButton-Red:focus,
+#uber.theme-02 button.defaultButton-Red:active,
+#uber.theme-02 a.defaultButton-Red:hover,
+#uber.theme-02 a.defaultButton-Red:focus,
+#uber.theme-02 a.defaultButton-Red:active,
+#uber.theme-02 .defaultButton-Red a:hover,
+#uber.theme-02 .defaultButton-Red a:focus,
+#uber.theme-02 .defaultButton-Red a:active {
+   background-color: #fff; 
+}
+
+/* Interior - Blockquote - Left Border */
+#uber.theme-02 blockquote {
+    border-left: 4px solid #e82012;
+}
+
+/* Interior - Sub Nav - Top Border */
+#uber.theme-02 #subNavWrapper #subNavContainer {
+    border-top: 3px solid #e82012;
+}
+
+/* Interior - Contact Box - Top Border */
+#uber.theme-02 #contactMainContainer .contactHeaderTitle {
+    border-top: 3px solid #e82012;
+}
+
+/* Layout Builder - CTA Brand One */
+#uber.theme-02 .lb-callToAction > div .lb-callToAction_contentWrapper .lb-callToAction_link.brand-one a {
+    background-color: #e82012;
+}
+
+/* Layout Builder - CTA Brand One - Hover */
+#uber.theme-02 .lb-callToAction>div .lb-callToAction_contentWrapper .lb-callToAction_link.brand-one a:hover,
+#uber.theme-02 .lb-callToAction>div .lb-callToAction_contentWrapper .lb-callToAction_link.brand-one a:focus {
+    background-color: #b9190e; /* dark red */
+}
+
+/* Layout Builder - Image Box - Background Colour */
+#uber.theme-02 .lb-imageBox > div .lb-imageBox_header.brand-one {
+    background-color: #e82012;
+}
+
+/* Landing - Feature Boxes - Bottom Border */
+#uber.theme-02 .section-feature .boxContainer .boxContent:after {
+    border-bottom: 4px solid #e82012;
+}
+
+/* Landing - Slider - Page Dots */
+#uber.theme-02.landing:not(.landingInterior) .ic-slider-dot-pagination li.current a,
+#uber.theme-02.landing:not(.interior) .ic-slider-dot-pagination li.current a {
+    background-color: #e82012;
+}

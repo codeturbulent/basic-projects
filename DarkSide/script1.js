@@ -1,38 +1,36 @@
-debugger;
-function showFile(input) {
-  let file = input.files[0];
-  alert(`Uploading File .... ${file.name}`);
+document.getElementById("download").addEventListener("change", function (event) {
+  const file = event.target.files[0];
+  if (!file) return;
 
-  return (filename = file.name);
-}
-document.getElementById("download").addEventListener("change", function () {
-  var fr = new FileReader();
-  fr.onload = function () {
-    var x = filename.indexOf(".");
-    var x2 = parseInt(filename.slice(x + 1, x + 3));
-    var x1 = parseInt(filename.slice(0, x));
-    var predec = fr.result;
-    var output = "";
-    for (
-      i = 0, j = 1;
-      i < predec.length + 5, j < predec.length + 5;
-      i += 2, j += 2
-    ) {
-      var symbol1 = predec.indexOf("`");
-      var no1 = parseInt(predec.slice(0, symbol1), x1);
-      predec = predec.slice(symbol1 + 1);
-      var symbol2 = predec.indexOf(".");
-      var no2 = parseInt(predec.slice(0, symbol2), x2);
-      predec = predec.slice(symbol2 + 1);
-      no1 = no1.toString(10);
-      no2 = no2.toString(10);
-      no1 = String.fromCharCode(no1);
-      no2 = String.fromCharCode(no2);
+  const fileName = file.name;
+  const parts = fileName.split(".");
+  if (parts.length < 3) {
+    alert("Invalid file format. Please do not rename the encoded files.");
+    return;
+  }
 
-      console.log(i, j);
-      output += no1 + "" + no2;
+  const base1 = parseInt(parts[0]);
+  const base2 = parseInt(parts[1]);
+
+  const reader = new FileReader();
+  reader.onload = function (e) {
+    const content = e.target.result;
+    // Split by ` or . and remove empty strings
+    const codes = content.split(/[`.]/).filter((x) => x.length > 0);
+    let output = "";
+
+    for (let i = 0; i < codes.length; i++) {
+      const base = i % 2 === 0 ? base1 : base2;
+      try {
+        const charCode = parseInt(codes[i], base);
+        if (!isNaN(charCode)) {
+          output += String.fromCharCode(charCode);
+        }
+      } catch (err) {
+        console.error("Error decoding character:", codes[i], err);
+      }
     }
-    document.getElementById("text").textContent = output;
+    document.getElementById("text").value = output;
   };
-  fr.readAsText(this.files[0]);
+  reader.readAsText(file);
 });

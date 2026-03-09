@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupnagar - Home</title>
+</head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oregano:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<body>
+    <header>
+        <div class="headerlogo">
+            <h1>RUPNAGAR</h1>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>Living Here</li>
+                <li>Things to do</li>
+                <li>Gallery</li>
+                <li>Development</li>
+            </ul>
+        </div>
+        <div class="search">search-box</div>
+        </div>
+    </header>
+    <div class="maincont">
+        <div class="heropage">
+            <div class="feature">
+                <div class="feature-box"> <img src="images/icons/news.png" alt="">
+                    <h2>News</h2>
+                </div>
+                <div class="feature-box"> <img src="images/icons/weather.png" alt="">
+                    <h2>Weather</h2>
+                </div>
+                <div class="feature-box"> <img src="images/icons/map.png" alt="">
+                    <h2>Map</h2>
+                </div>
+                <div class="feature-box"> <img src="images/icons/trans.png" alt="">
+                    <h2>Transport</h2>
+                </div>
+            </div>
+        </div>
+        <div class="featurecont">
+            <div class="featurediv" id="news">
+                <h1>NEWS</h1>
+                <div id="newsbox">
+                    loading...
+                </div>
+            </div>
+            <div class="featurediv" id="weather">
+
+            <div class="weather-container">
+                <div class="left-section">
+
+
+                    <h1 class="temperature">Temperature: <span id="temp"></span>°C</h1>
+                    <p class="feels-like">Feels Like: <span id="feels-like"></span>°C</p>
+
+                    <div class="min-max-temp">
+                        <p>Min Temp: <span id="temp_min"></span>°C</p>
+                        <p>Max Temp: <span id="temp_max"></span>°C</p>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Weather Icon">
+                        <p id="description">Conditions: </p>
+                    </div>
+                </div>
+
+                <div class="right-section">
+                    <h1 id="city-name"></h1>
+                    <p id="date"></p>
+
+                    <div class="weather-details">
+
+                        <div class="detail-p">
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=psdglEpjs3km&format=png&color=8C3C0F"
+                                    height="16px" alt="Humidity"> Humidity:
+                            </div>
+                            <div>
+                                <span id="humidity"></span>%
+                            </div>
+                        </div>
+                        <div class="detail-p">
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=101180&format=png&color=8C3C0F"
+                                    height="16px" alt="Pressure"> Pressure:
+                            </div>
+                            <div>
+                                <span id="pressure"></span> hPa
+                            </div>
+                        </div>
+                        <div class="detail-p">
+                            <div>
+                                <img src="https://img.icons8.com/?size=100&id=101180&format=png&color=8C3C0F"
+                                    height="16px" alt="Sea Level Pressure"> Sea Level Pressure:
+                            </div>
+                            <div><span id="sea_level"></span> hPa
+                            </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=101180&format=png&color=8C3C0F"
+                                    height="16px" alt="Ground Level Pressure"> Ground Level Pressure: </div>
+                            <div><span id="grnd_level"></span> hPa </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=74197&format=png&color=8C3C0F"
+                                    height="16px" alt="Wind Speed"> Wind Speed: </div>
+                            <div> <span id="wind_speed"></span> m/s
+                            </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=TmFLyL04csNw&format=png&color=8C3C0F"
+                                    height="16px" alt="Wind Direction"> Wind Direction: </div>
+                            <div> <span id="wind_deg"></span>°
+                            </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=cbTJpWsaVb_Q&format=png&color=8C3C0F"
+                                    height="16px" alt="Wind Gusts"> Wind Gusts: </div>
+                            <div> <span id="wind_gust"></span> m/s </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=0wo6x1tjkYGS&format=png&color=8C3C0F"
+                                    height="16px" alt="Cloudiness"> Cloudiness: </div>
+                            <div> <span id="cloudiness"></span>% </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=7840&format=png&color=8C3C0F"
+                                    height="16px" alt="Visibility"> Visibility: </div>
+                            <div> <span id="visibility"></span> km </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=103374&format=png&color=8C3C0F"
+                                    height="16px" alt="Sunrise"> Sunrise: </div>
+                            <div> <span id="sunrise"></span> </div>
+                        </div>
+                        <div class="detail-p">
+                            <div><img src="https://img.icons8.com/?size=100&id=103375&format=png&color=8C3C0F"
+                                    height="16px" alt="Sunset"> Sunset: </div>
+                            <div> <span id="sunset"></span> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="featurediv" id="map">
+            
+            <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:1000px;height:400px;"><div id="google-maps-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Rup+Nagar,+Uttar+Pradesh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&maptype=satellite"></iframe></div></div>
+        </div>
+        <div class="featurediv" id="transport">
+           <div id="trainsdata" style="height:100%; width:100%;max-width:100%;">
+            <table>
+                <thead>
+                  <tr>
+                    <th>Train Number</th>
+                    <th>Train Name</th>
+                    <th>Source Station</th>
+                    <th>Dest. Station</th>
+                    <th>Arrival</th>
+                    <th>Departure</th>
+                    <th>Halt</th>
+                    <th>Daily</th>
+                    <th>Available Classes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01918</td>
+                    <td>TDL FBD EXP SPL</td>
+                    <td>TDL</td>
+                    <td>FBD</td>
+                    <td>08:39</td>
+                    <td>08:40</td>
+                    <td>00:01H</td>
+                    <td>Y</td>
+                    <td>UNRESERVED</td>
+                  </tr>
+                  <tr>
+                    <td>05420</td>
+                    <td>KSJ SKB PASS SPL</td>
+                    <td>KSJ</td>
+                    <td>SKB</td>
+                    <td>08:48</td>
+                    <td>08:49</td>
+                    <td>00:01H</td>
+                    <td>Y</td>
+                    <td>UNRESERVED</td>
+                  </tr>
+                  <tr>
+                    <td>01917</td>
+                    <td>FBD TDL EXP SPL</td>
+                    <td>FBD</td>
+                    <td>TDL</td>
+                    <td>16:44</td>
+                    <td>16:45</td>
+                    <td>00:01H</td>
+                    <td>Y</td>
+                  
+                    <td>UNRESERVED</td>
+                  </tr>
+                  <tr>
+                    <td>05419</td>
+                    <td>SKB KSJ PASS SPL</td>
+                    <td>SKB</td>
+                    <td>KSJ</td>
+                    <td>18:23</td>
+                    <td>18:24</td>
+                    <td>00:01H</td>
+                    <td>Y</td>
+                   
+                    <td>UNRESERVED</td>
+                  </tr>
+                </tbody>
+              </table></div>
+        </div>
+    </div>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+<script src="script.js"></script>
+
+</html>

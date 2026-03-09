@@ -1,45 +1,52 @@
-var current = new Date();
-var hrs = current.getHours();
-var miut = current.getMinutes();
-var sec = current.getSeconds();
-var date = current.getDate();
-var month = current.getMonth() + 1;
-var year = current.getFullYear();
-var time = hrs + ":" + miut + ":" + sec;
-console.log(time);
-var dateo = date + "/" + month + "/" + year;
-console.log(dateo);
+let doneCount = 0;
+let srNo = 1;
+
+document.getElementById("todoForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+  save();
+  this.reset();
+});
 
 function save() {
-  var area = document.getElementById("textar").value;
-  var title = document.getElementById("text").value;
-  var text = `<tr> <td width="70px"></td> <td width="500px"  title="${area}" >${title}</td> <td width="120px" title="${dateo}" >${time}</td> <td class="tdbtn" width="110px" onClick="deleteRow(this)">Remove</td> <td  width="100px" class="tdbtn" onClick="doneRow(this)">Check </td> </tr>`;
-  let table = document.getElementById("table");
-  console.log(text);
+  const current = new Date();
+  const time = current.toLocaleTimeString();
+  const dateStr = current.toLocaleDateString();
 
-  table.innerHTML += text;
-}
-function remove() {
-  let table = document.getElementById("table");
-  var empty = "";
-  table.innerHTML = empty;
-}
-function deleteRow(obj) {
-  var index = obj.parentNode.rowIndex - 1;
-  var table = document.getElementById("table");
-  table.deleteRow(index);
-}
-function done() {
-  var index = document.getElementById("table").rows.length;
-  remove();
+  const area = document.getElementById("textar").value;
+  const title = document.getElementById("text").value;
 
+  const tableBody = document.getElementById("todoTableBody");
+  const row = document.createElement("tr");
 
-  var taskdone = eval(parseInt(document.querySelector('span').textContent, 10) + index);
-  document.querySelector("span").innerHTML = taskdone;
+  row.innerHTML = `
+    <td>\${srNo++}</td>
+    <td title="\${area}">\${title}</td>
+    <td title="\${dateStr}">\${time}</td>
+    <td class="tdbtn" onclick="deleteRow(this)">Remove</td>
+    <td class="tdbtn" onclick="doneRow(this)">Check</td>
+  `;
+
+  tableBody.appendChild(row);
 }
-function doneRow(obj){
 
-  var taskdone = eval(parseInt(document.querySelector('span').textContent, 10) + 1);
-  document.querySelector("span").innerHTML = taskdone;
-  deleteRow(obj);
+function removeAll() {
+  document.getElementById("todoTableBody").innerHTML = "";
+  srNo = 1;
+}
+
+function deleteRow(btn) {
+  btn.closest("tr").remove();
+}
+
+function doneRow(btn) {
+  doneCount++;
+  document.getElementById("doneCount").innerText = doneCount;
+  deleteRow(btn);
+}
+
+function checkAll() {
+  const rows = document.querySelectorAll("#todoTableBody tr");
+  doneCount += rows.length;
+  document.getElementById("doneCount").innerText = doneCount;
+  removeAll();
 }

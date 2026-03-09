@@ -1,13 +1,16 @@
-document.getElementById("myBtn").addEventListener("click", function() {
+document.getElementById("viewBtn").addEventListener("click", function () {
+  const fileInput = document.getElementById("fileInput");
+  if (fileInput.files.length === 0) {
+    alert("Please select a file first.");
+    return;
+  }
 
-    var reader = new FileReader();
-    reader.addEventListener('load', function() {
-      document.getElementById('file').innerText = this.result;
-    });
-    reader.readAsText(document.querySelector('input').files[0]);
-  
-  });
-
-for (i = 0;i>100;i+=1) {
-
-}
+  const reader = new FileReader();
+  reader.onload = function () {
+    document.getElementById("fileDisplay").innerText = this.result;
+  };
+  reader.onerror = function () {
+    alert("Error reading file.");
+  };
+  reader.readAsText(fileInput.files[0]);
+});

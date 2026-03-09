@@ -1,0 +1,251 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  /* CSS HEX */
+  --pr1color: #8c3c0fff;
+  --pr2color: #dc9b37ff;
+  --sec1color: #f3de6bff;
+  --ter1color: #fef9b8ff;
+  --ter2color: rgb(231, 255, 241);
+  --oregano: "Oregano", cursive;
+}
+body {
+  background-color: var(--ter1color);
+}
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0px;
+  background-color: var(--ter2color);
+  width: 100%;
+  min-width: max-content;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 5px 10px 30px;
+  background-blend-mode: hard-light;
+  color: var(--pr1color);
+  font-family: var(--oregano);
+}
+.nav {
+  max-width: 600px;
+  width: 60%;
+}
+.nav ul {
+  display: flex;
+  min-width: max-content;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.heropage {
+  margin-top: 4.5rem;
+  height: 700px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(images/mainfeild.webp);
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 99.9vw;
+}
+.feature {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+.feature-box {
+  height: 6rem;
+  width: 10rem;
+  background-color: rgba(250, 255, 186, 0.808);
+  margin: 5px 5px 3px 5px;
+  display: flex;
+  font-family: var(--oregano);
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 3px solid var(--pr2color);
+  box-shadow: 0px -5px 10px var(--pr2color);
+  color: var(--pr1color);
+}
+.feature-box img {
+  height: 2.5rem;
+  filter: drop-shadow(1px 1px 1px var(--pr1color));
+  z-index: 0;
+}
+.featurediv {
+  margin-top: 10px;
+  max-width: 900px;
+  width: 80vw;
+  min-height: max-content;
+  padding: 20px;
+  background-color: var(--ter2color);
+  border: 1px solid var(--pr1color);
+  box-shadow: -3px 5px 10px var(--pr1color);
+}
+.featurecont {
+  height: max-content;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#newsbox {
+  height: 300px;
+}
+#news {
+  font-family: var(--oregano);
+  color: var(--pr1color);
+}
+
+.weather-container {
+  font-family: var(--oregano);
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 900px;
+  padding: 10px;
+  color: var(--pr1color);
+}
+
+.left-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  text-align: left;
+  margin-right: 5px;
+}
+
+.temperature {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.feels-like {
+  font-size: 1.5rem;
+}
+
+.min-max-temp {
+  font-size: 1.22rem;
+}
+
+.weather-icon {
+  margin-top: 2px;
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.weather-icon img {
+  width: 170px;
+  height: 170px;
+}
+
+.right-section {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-section h1 {
+  font-size: 32px;
+  margin: 0;
+  text-align: right;
+}
+
+.right-section p {
+  font-size: 1.25rem;
+  margin-top: 1px;
+}
+.right-section #date {
+  text-align: right;
+  font-weight: 600;
+}
+
+.weather-details .detail-p {
+  font-size: 1.25rem;
+  margin-top: 6px;
+  align-items: center;
+  display: flex;
+  height: 1.25rem;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#google-maps-display img {
+  max-width: none !important;
+  background: none !important;
+  font-size: inherit;
+  font-weight: inherit;
+}
+.footer{
+  height: 300px;
+  background-color: var(--pr1color);
+  margin-top: 1.5rem;
+  box-shadow: 0px -5px 10px var(--pr1color);
+}
+/* Basic Reset */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 15px;
+  font-family: 'Arial', sans-serif;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Table Header Style */
+thead {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+th {
+  border: 2px solid #4CAF50;
+}
+
+/* Table Body Style */
+tbody tr {
+  background-color: #f2f2f2; /* Light Gray */
+  border: 1px solid #cccccc;
+}
+
+tbody tr:hover {
+  background-color: #d1e7dd; /* Light Green on Hover */
+}
+
+/* Odd Row Background */
+tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White */
+}
+
+/* Table Borders */
+td {
+  border: 1px solid #dddddd;
+  width: max-content;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  th, td {
+      font-size: 14px;
+      padding: 8px;
+  }
+}

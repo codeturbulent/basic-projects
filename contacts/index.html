@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacts</title>
+    <title>Contact File Viewer</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        #file { background: #f0f0f0; padding: 10px; border-radius: 5px; margin-top: 10px; }
+    </style>
 </head>
-<link rel="text" href="17-24-Sheet1.txt">
-<script src="index.js"></script>
 <body>
-    <input type="file">
-    <button id="myBtn">Try it</button>
-    <pre id="file"></pre>
-    <div class="conts">
-<button onclick="newfism()">button</button>
-    </div>
+    <h1>Contact File Viewer</h1>
+    <p>Upload a text file to view its contents.</p>
+    <input type="file" id="fileInput">
+    <button id="viewBtn">View Content</button>
+    <pre id="fileDisplay"></pre>
+
+    <script src="index.js"></script>
 </body>
 </html>

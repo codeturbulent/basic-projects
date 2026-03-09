@@ -1,0 +1,447 @@
+/* -----------------------------------------------------
+GENERAL MODAL STRUCTURE
+----------------------------------------------------- */
+/* Disable Body Scroll when Modal Open */
+body.EmergencyBannerOpen,
+body.BrowserBannerOpen {
+    overflow: hidden !important;
+}
+
+/* Main Modal Container */
+.icEmergencyModal {
+    position: relative;
+    z-index: 9999;
+    display: none;
+}
+#icBrowserModal_outer.icEmergencyModal {
+    z-index: 10000;
+}
+.icEmergencyModal.is-open:not([modal-animation]), .icEmergencyModal[modal-animation].is-open {
+    display: block;
+}
+.icEmergencyModal[modal-animation]:not(.is-open) {
+    display: none;
+}
+
+/* Modal Overlay */
+.icEmergencyModal .icEmergencyModal_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Container */
+.icEmergencyModal .icEmergencyModal_container {
+    position: relative;
+    top: 25px;
+    width: 90vw;
+    max-width: 800px;
+    max-height: calc(100vh - 113px);
+    border-radius: 3px;
+    overflow-y: auto;
+}
+
+.x-apple .icEmergencyModal .icEmergencyModal_container {
+    max-height: calc(100vh - 183px);
+}
+.x-android .icEmergencyModal .icEmergencyModal_container {
+    max-height: calc(100vh - 163px);
+}
+
+
+@media only screen and (min-width: 600px) {
+    .icEmergencyModal .icEmergencyModal_container {
+        top: 50px;
+        max-height: calc(100vh - 138px);
+    }
+
+    .x-apple .icEmergencyModal .icEmergencyModal_container {
+        max-height: calc(100vh - 208px);
+    }
+    .x-android .icEmergencyModal .icEmergencyModal_container {
+        max-height: calc(100vh - 188px);
+    }
+}
+
+/* Alert Banner */
+.icEmergencyModal .icEmergencyModal_container .alertbanner {
+    display: none;
+    background: #fff;
+}
+
+/* Modal Header */
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    /* border-bottom: 1px solid #eee; */
+}
+
+/* Modal Close */
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icEmergencyModal_close
+,.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 48px;
+    background: transparent;
+    transition: background 0.3s ease-in-out;
+}
+
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icEmergencyModal_close:before
+,.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close:before {
+    content: "\2715";
+    font-size: 28px;
+    color: #000;
+    transition: color 0.3s ease-in-out;
+}
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icEmergencyModal_close:hover
+,.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icEmergencyModal_close:focus
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close:hover
+,.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close:focus {
+    background-color: rgba(0,0,0,0.5);
+}
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icEmergencyModal_close:hover:before
+,.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icEmergencyModal_close:focus:before
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close:hover:before
+,.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close:focus:before {
+    color: #fff;
+}
+.ie .icEmergencyModal .icEmergencyModal_container .icEmergencyModal_header .icBrowserModal_close {
+    background-image: url(../fonts/alertbanner-alert_close_btn.svg);
+    background-size: 18px 20px;
+    background-position: 15px center;
+    background-repeat: no-repeat;
+}
+
+/* Modal Content */
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_content {
+    padding: 15px 30px 30px;
+}
+
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_content ol,
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_content ul {
+    display: table;
+    margin-right: auto;
+    margin-left: auto;
+    width: auto;
+    text-align: left;
+}
+
+/* Modal Footer */
+.icEmergencyModal .icEmergencyModal_container .icEmergencyModal_footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 15px 30px;
+    /* border-top: 1px solid #000; */
+}
+
+/* Modal Fade Animation */
+[modal-animation="fade"][aria-hidden="false"] .icEmergencyModal_overlay {
+    animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+[modal-animation="fade"][aria-hidden="true"] .icEmergencyModal_overlay {
+    animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+[modal-animation="fade"] .icEmergencyModal_container,
+[modal-animation="fade"] .icEmergencyModal_overlay {
+    will-change: transform;
+}
+
+/* Modal Slide Animation */
+[modal-animation="slide"][aria-hidden="false"] .icEmergencyModal_overlay {
+    animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+    [modal-animation="slide"][aria-hidden="false"] .icEmergencyModal_container {
+        animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+[modal-animation="slide"][aria-hidden="true"] .icEmergencyModal_overlay {
+    animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+@media screen and (prefers-reduced-motion: no-preference) {
+    [modal-animation="slide"][aria-hidden="true"] .icEmergencyModal_container {
+        animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+[modal-animation="slide"] .icEmergencyModal_container,
+[modal-animation="slide"] .icEmergencyModal_overlay {
+    will-change: transform;
+}
+
+/* Modal Animation Key Frames Styles */
+@keyframes mmfadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes mmfadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes mmslideIn {
+    from {
+        transform: translateY(15%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes mmslideOut {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10%);
+    }
+}
+
+
+/* -----------------------------------------------------
+GENERAL MODAL CONTENT
+----------------------------------------------------- */
+/* Title */
+.icEmergencyModal_title {
+    text-align: center;
+    padding: 115px 0 10px;
+    margin: 0px;
+    font-size: 1.5em;
+    line-height: 1.2em;
+    overflow: hidden;
+    color: #000;
+    background-image: url(../fonts/alertbanner-alert_icon.svg) !important;
+    background-repeat: no-repeat;
+    background-size: 64px 64px;
+    background-position: center 30px;
+}
+
+@media only screen and (min-width: 600px) {
+    .icEmergencyModal_title {
+        font-size: 1.75em;
+        line-height: 1.3em;
+    }
+}
+
+/* Content Text */
+.icEmergencyModal_content {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #000;
+    text-align: center;
+    position: relative;
+}
+
+@media only screen and (min-width: 600px) {
+    .icEmergencyModal_content {
+        font-size: 1.1875em;
+    }
+}
+
+.icEmergencyModal_content p {
+    margin: 0px 0px 15px 0px;
+    white-space: pre-wrap;
+    word-break: break-word;
+    word-wrap: break-word;
+}
+.icEmergencyModal_content a {
+    font-weight: bold;
+    word-break: break-word;
+}
+.icEmergencyModal_content img,
+.BrowserBannerText img {
+    max-width: 100%;
+}
+
+.icEmergencyModal .EmergencyBannerAttachments {
+    margin-top: 15px;
+}
+.icEmergencyModal .EmergencyBannerAttachments .AttachmentTitle {
+    font-weight: bold;
+}
+
+/* Chrome fix for displaying centered UL */
+.icEmergencyModal_content ul li,
+.BrowserBannerText ul li {
+    list-style-position: inside;
+}
+
+
+/* -----------------------------------------------------
+MODAL THEMES
+----------------------------------------------------- */
+/* Alert / Red Theme */
+.icEmergencyModal .icEmergencyModal_container .alertbanner.alert,
+.icEmergencyModal .icEmergencyModal_container .alertbanner.red{
+    background: #C02D23;
+}
+
+.icEmergencyModal .icEmergencyModal_container .alertbanner.alert .icEmergencyModal_header .icEmergencyModal_close:before,
+.icEmergencyModal .icEmergencyModal_container .alertbanner.red .icEmergencyModal_header .icEmergencyModal_close:before {
+    color: #fff;
+}
+
+.alert .icEmergencyModal_title,
+.red .icEmergencyModal_title {
+    color: #fff;
+    background-image: url(../fonts/alertbanner-alert_icon_white.svg) !important;
+}
+.alert .icEmergencyModal_content,
+.red .icEmergencyModal_content {
+    color: #fff;
+}
+.alert .icEmergencyModal_content a,
+.red .icEmergencyModal_content a  {
+    color: #ffdfdf;
+}
+
+/* Info / Blue Theme */
+.icEmergencyModal .icEmergencyModal_container .alertbanner.info,
+.icEmergencyModal .icEmergencyModal_container .alertbanner.blue {
+    background: linear-gradient(#fff, #B7DBE9);
+}
+.info .icEmergencyModal_title,
+.blue .icEmergencyModal_title {
+    background-image: url(../fonts/alertbanner-alert_icon_blue.svg) !important;
+}
+.info .icEmergencyModal_content a,
+.blue .icEmergencyModal_content a {
+    color: #2262BC;
+}
+
+/* General / Green Theme */
+.icEmergencyModal .icEmergencyModal_container .alertbanner.general,
+.icEmergencyModal .icEmergencyModal_container .alertbanner.green {
+    background: linear-gradient(#fff, #BFE4C3);
+}
+.general .icEmergencyModal_title,
+.green .icEmergencyModal_title {
+  background-image: url(../fonts/alertbanner-alert_icon_green.svg) !important;
+}
+
+/* Unset Theme */
+.icEmergencyModal .icEmergencyModal_container .alertbanner.unset {
+    background: linear-gradient(#fff, #ccc);
+}
+.unset .icEmergencyModal_title {
+    background-image: url(../fonts/alertbanner-alert_icon_gray.svg) !important;
+}
+
+
+/* -----------------------------------------------------
+NAVIGATION STRUCTURE
+----------------------------------------------------- */
+
+#icEmergencyModal_wrapperNav {
+    display: none;
+}
+
+.withControls #icEmergencyModal_wrapperNav {
+    display: block;
+}
+
+#icEmergencyModal_wrapperNavButtons {
+    display: none !important;
+}
+
+
+/* -----------------------------------------------------
+NAVIGATION STRUCTURE
+----------------------------------------------------- */
+
+.icEmergencyModal .alertNav,
+#BrowserBannerWrapperOuter .alertNav {
+    position: relative;
+    bottom: -44px;
+    height: 48px;
+    font-size: 0;
+    width: 100% !important;
+    text-align: center;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 600px) {
+    .icEmergencyModal .alertNav,
+    #BrowserBannerWrapperOuter .alertNav {
+        bottom: -69px;
+    }
+}
+
+.icEmergencyModal .alertNav>div,
+#BrowserBannerWrapperOuter .alertNav>div {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.icEmergencyModal .alertNav>div>a,
+#BrowserBannerWrapperOuter .alertNav>div>a {
+    width: 48px;
+    height: 48px;
+    border-radius: 24px;
+    float: left;
+    text-indent: -9999px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.2);
+    background-repeat: no-repeat;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.icEmergencyModal .alertNav>div>a:hover,
+.icEmergencyModal .alertNav>div>a:focus,
+#BrowserBannerWrapperOuter .alertNav>div>a:hover,
+#BrowserBannerWrapperOuter .alertNav>div>a:focus {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.icEmergencyModal .alertNavLeft a,
+#BrowserBannerWrapperOuter .alertNavLeft a {
+    background-image: url(../fonts/alertbanner-alert_chevron_left_white.svg);
+    background-size: 14px 26px;
+    background-position: 15px center;
+}
+
+.icEmergencyModal .alertNavPause a,
+#BrowserBannerWrapperOuter .alertNavPause a {
+    background-image: url(../fonts/alertbanner-alert_pause_white.svg);
+    background-size: 8px 22px;
+    background-position: center center;
+}
+
+.icEmergencyModal .alertNavPause a.paused,
+#BrowserBannerWrapperOuter .alertNavPause a.paused {
+    background-image: url(../fonts/alertbanner-alert_play_white.svg);
+    background-size: 12px 18px;
+    background-position: 20px center;
+}
+
+.icEmergencyModal .alertNavRight a,
+#BrowserBannerWrapperOuter .alertNavRight a {
+    background-image: url(../fonts/alertbanner-alert_chevron_right_white.svg);
+    background-size: 14px 26px;
+    background-position: 19px center;
+}
+

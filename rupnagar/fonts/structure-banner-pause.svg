@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="2964 -769 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-banner-pause);
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+    <clipPath id="clip-banner-pause">
+      <rect x="2964" y="-769" width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="banner-pause" class="cls-1">
+    <g id="Group_390" data-name="Group 390" transform="translate(3000 -792)">
+      <g id="Group_389" data-name="Group 389">
+        <g id="Group_388" data-name="Group 388" transform="translate(-36 23)">
+          <path id="Path_791" data-name="Path 791" class="cls-2" d="M6,19h4V5H6ZM14,5V19h4V5Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
