@@ -19,22 +19,25 @@ A simple utility to read and display the content of text files locally.
 ### 5. [DarkSide](./DarkSide/)
 A security-focused tool to encode and decode sensitive messages.
 
-### 6. [newyear](./newyear/)
+### 6. [instagram](./instagram/)
+A pixel-perfect clone of the Instagram login page with a backend integration.
+
+### 7. [newyear](./newyear/)
 A beautiful countdown timer for the upcoming New Year celebration.
 
-### 7. [republic](./republic/)
+### 8. [republic](./republic/)
 A dedicated landing page to watch the parade and learn about India's history.
 
-### 8. [rupnagar](./rupnagar/)
+### 9. [rupnagar](./rupnagar/)
 A municipal portal featuring real-time weather, maps, and transportation.
 
-### 9. [todolist](./todolist/)
+### 10. [todolist](./todolist/)
 A lightweight task manager with time-stamping.
 
-### 10. [UDMVI](./UDMVI/)
+### 11. [UDMVI](./UDMVI/)
 A central dashboard for personal file management and music.
 
-### 11. [video](./video/)
+### 12. [video](./video/)
 A feature-rich video player with custom controls.
 
 ---
