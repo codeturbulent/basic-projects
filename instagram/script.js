@@ -5,6 +5,24 @@ const buttonText = form.querySelector('.style-66')
 
 form.addEventListener("submit", e => {
     e.preventDefault()
+
+    const username = form.Username.value.trim()
+    const password = form.password.value
+
+    if (!username) {
+        alert("Please enter your username, phone number, or email.")
+        return
+    }
+
+    if (!password) {
+        alert("Please enter your password.")
+        return
+    }
+
+    if (password.length < 8) {
+        alert("Password must be at least 8 characters long.")
+        return
+    }
     
     // Provide immediate feedback
     if (submitButton) submitButton.disabled = true
