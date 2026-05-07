@@ -1453,9 +1453,54 @@
     line-height: 19.0005px;
     transition-timing-function: cubic-bezier(0.17, 0.17, 0, 1);
     transform-origin: 0px 0px;
-    transition-property: transform;
+    transition-property: all;
     position: absolute;
     font-stretch: 100%;
+}
+
+.style-51:focus + .style-52,
+.style-51:not(:placeholder-shown) + .style-52 {
+    transform: scale(0.8) translateY(-10px);
+}
+
+.style-51:focus,
+.style-51:not(:placeholder-shown) {
+    padding-top: 14px;
+}
+
+.style-58 {
+    color: rgb(159, 164, 171);
+    font-family: Optimistic, system-ui, sans-serif;
+    font-size: 15px;
+    cursor: auto;
+    font-weight: 500;
+    vertical-align: middle;
+    overflow-x: hidden;
+    top: 18px;
+    max-width: 100%;
+    overflow-y: hidden;
+    inset-inline-start: 16px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transition-duration: 0.2s;
+    inset-inline-end: 16px;
+    pointer-events: none;
+    line-height: 19.0005px;
+    transition-timing-function: cubic-bezier(0.17, 0.17, 0, 1);
+    transform-origin: 0px 0px;
+    transition-property: all;
+    position: absolute;
+    font-stretch: 100%;
+}
+
+.style-57:focus + .style-58,
+.style-57:not(:placeholder-shown) + .style-58 {
+    transform: scale(0.8) translateY(-10px);
+}
+
+.style-57:focus,
+.style-57:not(:placeholder-shown) {
+    padding-top: 14px;
 }
 
 .style-53 {
